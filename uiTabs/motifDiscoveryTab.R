@@ -20,14 +20,14 @@ motifDiscoveryTab <- tabPanel(
       h5("*This currently only supports DNA characters, but alternative alphabets will be supported soon!"),
       
       # slider for minimum number of reads to consider
-      sliderInput("motifDiscovery_minReads", label = strong("Min. number of reads to consider:"), min = 0, max = 1000, value = 10, step = 5),
+      sliderInput("motifDiscovery_minReads", label = strong("Min. number of reads to consider:"), min = 0, max = 1000, value = 10, step = 2),
       shinyBS::bsTooltip("motifDiscovery_minReads", "Min. number of reads for sequences to be retained in analyis."),
       
       # set min and max lengths for motifs
       sliderInput(
         "motifDiscovery_lengthRange",
         label = strong("Motif length range:"),
-        min = 3, max = 15,
+        min = 3, max = 45,
         value = c(5, 10), step = 1
       ),
       shinyBS::bsTooltip("motifDiscovery_lengthRange", "The minimum and maximum string lengths to consider in the analysis."),
