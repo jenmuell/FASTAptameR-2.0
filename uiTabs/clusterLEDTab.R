@@ -16,11 +16,11 @@ clusterLEDTab <- tabPanel(
       ),
       
       # slider for minimum number of reads to cluster
-      sliderInput("clusterSlider_minReads", label = strong("Min. number of reads to cluster:"), min = 0, max = 1000, value = 10, step = 5),
+      sliderInput("clusterSlider_minReads", label = strong("Min. number of reads to cluster:"), min = 0, max = 1000, value = 10, step = 2),
       shinyBS::bsTooltip("clusterSlider_minReads", "Min. number of reads for sequences to be clustered"),
       
       # slider for max LED
-      sliderInput("clusterSlider_maxLED", label = strong("Max. LED:"), min = 0, max = 20, value = 7, step = 1),
+      sliderInput("clusterSlider_maxLED", label = strong("Max. LED:"), min = 0, max = 50, value = 7, step = 1),
       shinyBS::bsTooltip("clusterSlider_maxLED", "Max. edit distance from seed sequence"),
       
       # slider for total number of desired clusters
